@@ -1,17 +1,10 @@
 <div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
-    <%= category.name %>
-  </p>
-
-  <p>
-    <strong>Icon:</strong>
+<div class="d-flex justify-content-between text-bg-light p-3 rounded ">
+  <p class="link-underline-light">
     <%= category.icon %>
   </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= category.user_id %>
+  <p class="link-underline-light">
+    <%= category.name %>
   </p>
-
+</div>
 </div>

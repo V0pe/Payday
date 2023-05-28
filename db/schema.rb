@@ -27,8 +27,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_28_043650) do
     t.string "name"
     t.float "amount"
     t.bigint "user_id", null: false
+    t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_transactions_on_category_id"
     t.index ["user_id"], name: "index_transactions_on_user_id"
   end
 
@@ -52,5 +54,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_28_043650) do
   end
 
   add_foreign_key "categories", "users"
+  add_foreign_key "transactions", "categories"
   add_foreign_key "transactions", "users"
 end

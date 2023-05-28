@@ -4,6 +4,7 @@ class TransactionsController < ApplicationController
   # GET /transactions or /transactions.json
   def index
     @transactions = Transaction.all
+    @categories = Category.all
   end
 
   # GET /transactions/1 or /transactions/1.json
@@ -12,6 +13,7 @@ class TransactionsController < ApplicationController
   # GET /transactions/new
   def new
     @transaction = Transaction.new
+    @categories = Category.all
   end
 
   # GET /transactions/1/edit
@@ -20,6 +22,7 @@ class TransactionsController < ApplicationController
   # POST /transactions or /transactions.json
   def create
     @transaction = Transaction.new(transaction_params)
+    @transaction.user = current_user
 
     respond_to do |format|
       if @transaction.save
@@ -64,6 +67,6 @@ class TransactionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def transaction_params
-    params.require(:transaction).permit(:name, :amount, :user_id)
+    params.require(:transaction).permit(:name, :amount, :user_id, :category_id)
   end
 end

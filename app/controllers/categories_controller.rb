@@ -4,10 +4,13 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     @categories = Category.all
+    @transaction = Transaction.where(category_id: params[:id])
   end
 
   # GET /categories/1 or /categories/1.json
-  def show; end
+  def show
+    @transactions = Transaction.where(category_id: params[:id])
+  end
 
   # GET /categories/new
   def new
@@ -20,6 +23,7 @@ class CategoriesController < ApplicationController
   # POST /categories or /categories.json
   def create
     @category = Category.new(category_params)
+    @category.user = current_user
 
     respond_to do |format|
       if @category.save
