@@ -1,4 +1,5 @@
 <div id="<%= dom_id transaction %>">
+<div class="d-flex justify-content-between bg-dark-subtle p-3 rounded">
   <p>
     <strong>Name:</strong>
     <%= transaction.name %>
@@ -8,10 +9,5 @@
     <strong>Amount:</strong>
     <%= transaction.amount %>
   </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= transaction.user_id %>
-  </p>
-
+</div>
 </div>

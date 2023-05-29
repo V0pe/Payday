@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     @categories = Category.all
-    @transaction = Transaction.where(category_id: params[:id])
+    @transactions = Transaction.where(category_id: params[:id])
   end
 
   # GET /categories/1 or /categories/1.json
@@ -27,7 +27,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to category_url(@category), notice: 'Category was successfully created.' }
+        format.html { redirect_to categories_url }
         format.json { render :show, status: :created, location: @category }
       else
         format.html { render :new, status: :unprocessable_entity }

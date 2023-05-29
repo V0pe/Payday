@@ -4,7 +4,7 @@
 
 <div id="transactions">
   <% @transactions.each do |transaction| %>
-       <%= render "transactions/transaction" %>
+       <%= render category_transactions_path %>
     <p>
       <%= link_to "Show this transaction", transaction %>
     </p>
