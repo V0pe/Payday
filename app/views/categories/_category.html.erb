@@ -6,8 +6,8 @@
     <p class="link-underline-light">
       <%= category.name %>
     </p>
+    <p class="link-underline-light">
     <% if category.transactions.present? %>
-      <p class="link-underline-light">
         <% total_amount = 0 %>
         <% category.transactions.each do |transaction| %>
           <% total_amount += transaction.amount %>

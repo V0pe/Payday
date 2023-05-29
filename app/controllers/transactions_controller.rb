@@ -14,7 +14,7 @@ class TransactionsController < ApplicationController
   # GET /transactions/1 or /transactions/1.json
   def show
     @category_id = params[:category_id]
-    @transactions = Transaction.where(category_id: @category_id).order(created_at: :desc)
+    @transactions = Transaction.all
     @total_amount = 0
     @transactions.each do |transaction|
       @total_amount += transaction.amount
@@ -38,7 +38,7 @@ class TransactionsController < ApplicationController
 
     respond_to do |format|
       if @transaction.save
-        format.html { redirect_to category_transactions_url(@category.id) }
+        format.html { redirect_to category_transactions_url(@transaction.category_id) }
         format.json { render :show, status: :created, location: @transaction }
       else
         format.html { render :new, status: :unprocessable_entity }
