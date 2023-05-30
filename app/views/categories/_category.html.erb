@@ -1,0 +1,21 @@
+<div id="<%= dom_id category %>">
+  <div class="d-flex justify-content-between bg-dark-subtle p-3 rounded">
+    <p class="link-underline-light text-decoration-none">
+      <%= category.icon %>
+    </p>
+    <p class="link-underline-light text-decoration-none">
+      <%= category.name %>
+    </p>
+    <p class="link-underline-light text-decoration-none">
+    <% if category.transactions.present? %>
+        <% total_amount = 0 %>
+        <% category.transactions.each do |transaction| %>
+          <% total_amount += transaction.amount %>
+        <% end %>
+        <%= total_amount %>
+            <% else %>
+      <%= 0 %>
+    <% end %>
+      </p>
+  </div>
+</div>
