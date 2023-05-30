@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :confirmable, :recoverable, :rememberable, :validatable
   has_many :categories
   has_many :transactions
+
+  validates :name, presence: true, length: { maximum: 250 }
 end
