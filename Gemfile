@@ -8,7 +8,7 @@ gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-#authentication
+# authentication
 gem 'devise'
 
 # Authorization
