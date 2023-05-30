@@ -1,12 +1,14 @@
 <div id="<%= dom_id category %>">
-  <div class="d-flex justify-content-between bg-dark-subtle p-3 rounded">
+  <div class="d-flex justify-content-between bg-secondary-subtle p-3 rounded align-items-center">
+    <div class="d-flex flex-row justify-content-between align-items-center">
     <p class="link-underline-light text-decoration-none">
     <%= image_tag category.icon, class: "img-thumbnail", alt: "icon" %>
     </p>
-    <p class="link-underline-light text-decoration-none">
+    <p class="text-decoration-none mx-5 fs-3 text-black">
       <%= category.name %>
     </p>
-    <p class="link-underline-light text-decoration-none">
+    </div>
+    <p class="text-decoration-none text-black fs-3">
     <% if category.transactions.present? %>
         <% total_amount = 0 %>
         <% category.transactions.each do |transaction| %>
