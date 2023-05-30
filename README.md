@@ -187,14 +187,12 @@ If you like this project, like it.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+I acknowledgeed the author [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) of this [creative design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) used.
 
-I would like to thank Microverse...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
+Also, I would like to thank Microverse...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- LICENSE -->
 
