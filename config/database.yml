@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: payday_production
-  username: payday
-  password: <%= ENV["PAYDAY_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  #database: payday_production
+  #username: payday
+  #password: <%= ENV["PAYDAY_DATABASE_PASSWORD"] %>
