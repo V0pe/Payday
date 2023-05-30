@@ -1,16 +1,40 @@
+<div container align-items-center>
 <p style="color: green"><%= notice %></p>
 
-<h1>Categories</h1>
+<% if user_signed_in? %>
+  <h1 class="text-center">Categories</h1>
+  <div id="categories">
+    <% @categories.each do |category| %>
+      <p class="link-underline-light">
+        <%= link_to category_transactions_path(category) do %>
+          <%= render partial: "category", locals: { category: category } %>
+        <% end %>
+      </p>
+    <% end %>
+  </div>
+  <%= link_to "add a new category", new_category_path, class: "btn btn-sucess mb-3", style: "background-color: #cc6600;" %>
 
-<div id="categories">
-  <% @categories.each do |category| %>
-
-    <p class="link-underline-light">
-<%= link_to category_transactions_path(category) do %>
-    <%= render partial: "category", locals: { category: category } %>
-  <% end %>
-    </p>
-  <% end %>
+<% else %>
+  <div class="alert alert-danger" role="alert">
+  
+  </div>
+  <div class="container">
+  <div class="row">
+  <div class="col-md-6">
+  <h2>Welcome to Payday</h2>
+  <p>What's Payday®?
+Glad you asked!
+Payday® is a great way to send money to friends and family, even if they bank somewhere 
+different than you do.1 That means it’s super easy to pitch in or get paid back for all 
+sorts of things like coffee for your coworkers or dinner with friends. Payday® is already 
+in lots of banking apps, so look for it in yours today.</p>
+<%= link_to "Sign In", new_user_session_path , class:"btn btn-sucess mb-3",style:"background-color: #cc6600;"%>
+  <%= link_to "Sign up", new_user_registration_path, class:"btn btn-sucess mb-3",style:"background-color: #cc6600;"%>
+  </div>
+  <div class="col-md-6">
+  <%= image_tag("splash.jpg", class: "rounded mx-auto d-block", style: "width: 25rem4") %></a>
+  </div>
+  </div>
+  </div>
+<% end %>
 </div>
-
-<%= link_to "add a new category", new_category_path, class:"btn btn-sucess mb-3",style:"background-color: #cc6600;" %>
