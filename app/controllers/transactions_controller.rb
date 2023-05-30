@@ -17,7 +17,7 @@ class TransactionsController < ApplicationController
     @transactions = Transaction.all
     @transaction = Transaction.where(id: params[:id])
     @transaction_cat_id = @transaction.first.category_id
-    @category = Category.where(id: @category_id )
+    @category = Category.where(id: @category_id)
     @total_amount = 0
     @transactions.each do |transaction|
       @total_amount += transaction.amount
