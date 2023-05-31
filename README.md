@@ -75,6 +75,16 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Add a link to your deployed project.
+
+- [Live Demo Link](https://rails-hvyl.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -149,9 +159,9 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>.
 
-- [ ] **[Share recipes]**
-- [ ] **[Like recipes]**
-- [ ] **[Add images for the recipes]**
+- [ ] **[express more features]**
+- [ ] **[Add transactions]**
+- [ ] **[View complex transactions]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

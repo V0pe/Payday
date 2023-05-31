@@ -1,5 +1,4 @@
-<h2>Log in</h2>
-
+<div style="margin-top: 6rem;">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class="mb-3">
     <%= f.label :email, class:"form-label" %><br />
@@ -11,16 +10,11 @@
     <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
   </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="mb-3">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
   <div class="actions">
-    <%= f.submit "Log in", class:"btn btn-sucess mb-3",style:"background-color: #cc6600;" %>
+    <%= f.submit "Log in", class:"btn btn-sucess mb-3 bg-primary text-white fs-5", style: "width: 100%; margin: auto;" %>
   </div>
 <% end %>
-
+<div class="text-center">
 <%= render "devise/shared/links" %>
+</div>
+</div>
