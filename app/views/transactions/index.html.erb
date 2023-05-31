@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
-<div style="width: 100%">
-<%= link_to "Back", categories_path, class:"btn btn-sucess mb-3 bg-primary text-white fs-4"%>
+<div class="bg-primary rounded px-3 pt-3 d-flex align-items-center" style="width: 100%; height: 3rem;">
+<%= link_to categories_path, class: "mb-3 fs-4" do %>
+  <%= image_tag("left-arrow.svg", class: "rounded d-block", style: "width: 2rem") %>
+<% end %>
 </div>
 <div class="d-flex justify-content-between px-4 fs-3" >
 <h4>Transactions</h4>
