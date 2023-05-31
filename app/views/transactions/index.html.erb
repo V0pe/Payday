@@ -1,14 +1,18 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Transactions</h1>
-<div class="d-flex justify-content-between px-4" >
-<%= link_to "Back", categories_path, class:"btn btn-sucess mb-3",style:"background-color: #cc6600;" %>
+<h4>Transactions</h4>
+<div class="d-flex justify-content-between px-4 fs-3" >
+<%= link_to "Back", categories_path, class:"btn btn-sucess mb-3 bg-primary text-white fs-4"%>
 <%= "Total amount:  #{@total_amount}" %>
 </div>
 <div id="transactions">
   <% @transactions.each do |transaction| %>
-      <%= render transaction %>
+    <p >
+    <%= link_to transaction_path(transaction) do %>
+      <%= render partial: "transaction", locals: { transaction: transaction } %>
+    <% end %>
+  </p>
   <% end %>
 </div>
 
-<%= link_to "New transaction", new_transaction_path, class:"btn btn-sucess mb-3",style:"background-color: #cc6600;" %>
+<%= link_to "New transaction", new_transaction_path, class:"btn btn-sucess mb-3 bg-primary text-white fs-5",style: "width: 100%; margin: auto;" %>
