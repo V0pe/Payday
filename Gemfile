@@ -15,6 +15,8 @@ gem 'devise'
 # testing
 gem 'rails-controller-testing'
 
+gem 'font-awesome-rails'
+
 # Authorization
 gem 'cancancan'
 
